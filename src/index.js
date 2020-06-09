@@ -39,6 +39,14 @@ const Lifecycle = (props) =>{
         }
     }, [props.stop]);
 
+    useEffect(() => {
+        console.log("マウントの時のみ実行");
+    }, []);
+
+    useEffect(()=>{
+        console.log("componentが呼ばれるたびに実行");
+    });
+
     return <div>{today}</div>;
 }
 ReactDom.render(
